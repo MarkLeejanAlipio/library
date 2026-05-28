@@ -18,3 +18,23 @@ function addBookToLibrary(title, author, pages, readStatus) {
     const createBook = new Book(title, author, pages, readStatus, bookId);
     myLibrary.push(createBook);
 }
+
+function displayBook() {
+    for (let book of myLibrary) {
+        const bookModal = document.createElement('div');
+        const bookTitle = document.createElement('h1');
+        const bookAuthor = document.createElement('p');
+        const bookPages = document.createElement('p');
+        const readStatusBtn = document.createElement('button');
+        const removeBtn = document.createElement('button');
+
+        bookTitle.textContent = book.title;
+        bookAuthor.textContent = book.author;
+        bookPages.textContent = book.pages;
+        readStatusBtn.textContent = 'Read';
+        removeBtn.textContent = 'Remove';
+        bookModal.append(bookTitle, bookAuthor, bookPages, readStatusBtn, removeBtn)
+
+        libraryContainer.appendChild(bookModal);
+    }
+}
