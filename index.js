@@ -19,6 +19,11 @@ function addBookToLibrary(title, author, pages, readStatus) {
     myLibrary.push(createBook);
 }
 
+// Example Books
+addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 295, 'read');
+addBookToLibrary('Dune', 'Frank Herbert', 412, 'not read');
+addBookToLibrary('The Left Hand of Darkness', 'Ursula K. Le Guin', 304, 'read');
+
 function displayBook() {
     for (let book of myLibrary) {
         const bookModal = document.createElement('div');
@@ -31,10 +36,12 @@ function displayBook() {
         bookTitle.textContent = book.title;
         bookAuthor.textContent = book.author;
         bookPages.textContent = book.pages;
-        readStatusBtn.textContent = 'Read';
+        readStatusBtn.textContent = book.readStatus;
         removeBtn.textContent = 'Remove';
         bookModal.append(bookTitle, bookAuthor, bookPages, readStatusBtn, removeBtn)
 
         libraryContainer.appendChild(bookModal);
     }
 }
+
+displayBook();
