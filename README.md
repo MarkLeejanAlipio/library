@@ -7,3 +7,7 @@ First project in JavaScript
 - CREATE a function takes argument, create a book object from those arg, and `push` the book obj to the array
     - GENERATE unique id for each book obb using `cryptop.randomUUID()`
 - CREATE a function that loops through the array and display each book on the page.
+    - SELECT the main element in the html
+    - CREATE container for each book
+    - CREATE element for each data
+    - APPEND container to the main element
