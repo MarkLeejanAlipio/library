@@ -1,3 +1,5 @@
+const libraryContainer = document.querySelector('.library-container')
+
 const myLibrary = [];
 
 function Book(title, author, pages, readStatus, bookId) {
