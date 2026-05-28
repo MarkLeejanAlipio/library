@@ -37,3 +37,9 @@ header {
 .new-book-btn:hover {
     opacity: 0.8;
 }
+
+.library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 15px;
+}
