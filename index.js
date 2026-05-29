@@ -26,6 +26,8 @@ addBookToLibrary('Dune', 'Frank Herbert', 412, 'Not Read');
 addBookToLibrary('The Left Hand of Darkness', 'Ursula K. Le Guin', 304, 'Read');
 
 function displayBook() {
+    libraryContainer.textContent = '';
+    
     for (let book of myLibrary) {
         const bookModal = document.createElement('div');
         const upperBookModal = document.createElement('div');
