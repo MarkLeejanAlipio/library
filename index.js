@@ -27,7 +27,7 @@ addBookToLibrary('The Left Hand of Darkness', 'Ursula K. Le Guin', 304, 'read');
 function displayBook() {
     for (let book of myLibrary) {
         const bookModal = document.createElement('div');
-        const bookTitle = document.createElement('h1');
+        const bookTitle = document.createElement('h2');
         const bookAuthor = document.createElement('p');
         const bookPages = document.createElement('p');
         const readStatusBtn = document.createElement('button');
