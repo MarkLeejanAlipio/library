@@ -95,3 +95,87 @@ header {
    border: 1px solid red;
    color: red;
 }
+
+/* Modal Form */
+.new-book-modal {
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.new-book-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-modal-btn {
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: grey;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    padding: 8px;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;  
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;;
+}
+
+.cancel-btn {
+    background-color: white;
+    border: 1px solid grey;
+}
+
+.cancel-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.add-btn {
+    background-color: #1a365d;
+    color: white;
+    border: none;
+}
+
+.add-btn:hover {
+  background-color: #002f60;
+}
