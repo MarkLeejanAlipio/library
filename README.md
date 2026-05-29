@@ -13,3 +13,4 @@ First project in JavaScript
     - CREATE element for each data
     - APPEND each element to container
     - APPEND container to the main element
+4. CREATE a form through `dialog` that allows users to input details for a new book when `New Book` btn is clicked. 
