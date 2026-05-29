@@ -13,4 +13,14 @@ First project in JavaScript
     - CREATE element for each data
     - APPEND each element to container
     - APPEND container to the main element
-4. CREATE a form through `dialog` that allows users to input details for a new book when `New Book` btn is clicked. 
+4. CREATE a form through `dialog` that allows users to input details for a new book.
+    - SELECT the `New Book`, close, cancel, form, and input elements
+    - OPEN the dialog when the `New Book` button is clicked
+    - CLOSE the dialog when the close or cancel button is clicked
+    - LISTEN for the form `submit` event
+    - PREVENT the default form submit behavior
+    - GET the input values using `.value`
+    - GET the read status using `.checked`
+    - ADD the new book to the library array
+    - DISPLAY the updated library
+    - RESET the form and close the dialog
