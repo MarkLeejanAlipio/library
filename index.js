@@ -1,5 +1,5 @@
 const libraryContainer = document.querySelector('.library-container')
-const addNewBookBtn = document.querySelector('new-book-btn');
+const addNewBookBtn = document.querySelector('.new-book-btn');
 
 const myLibrary = [];
 
