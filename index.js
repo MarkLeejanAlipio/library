@@ -1,5 +1,23 @@
 const libraryContainer = document.querySelector('.library-container')
 const addNewBookBtn = document.querySelector('.new-book-btn');
+const newBookModal = document.querySelector('.new-book-modal');
+const closeModalBtn = document.querySelector('.close-modal-btn');
+const cancelBtn = document.querySelector('.cancel-btn');
+const submitBtn = document.querySelector('.submit-btn');
+const bookForm = document.querySelector('.book-form');
+
+addNewBookBtn.addEventListener('click', () => {
+    newBookModal.showModal();
+})
+
+closeModalBtn.addEventListener('click', () => {
+    newBookModal.close();
+})
+
+cancelBtn.addEventListener('click', () => {
+    newBookModal.close();
+    bookForm.reset();
+})
 
 const myLibrary = [];
 
@@ -27,7 +45,7 @@ addBookToLibrary('The Left Hand of Darkness', 'Ursula K. Le Guin', 304, 'Read');
 
 function displayBook() {
     libraryContainer.textContent = '';
-    
+
     for (let book of myLibrary) {
         const bookModal = document.createElement('div');
         const upperBookModal = document.createElement('div');
