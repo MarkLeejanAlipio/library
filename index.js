@@ -4,10 +4,10 @@ const newBookModal = document.querySelector('.new-book-modal');
 const closeModalBtn = document.querySelector('.close-modal-btn');
 const cancelBtn = document.querySelector('.cancel-btn');
 const bookForm = document.querySelector('.book-form');
-const bookTitle = document.querySelector('#title');
-const bookAuthor = document.querySelector('#author');
-const bookPages = document.querySelector('#pages');
-const readStatus = document.querySelector('#read-status');
+const titleInput = document.querySelector('#title');
+const authorInput = document.querySelector('#author');
+const pagesInput = document.querySelector('#pages');
+const readStatusInput = document.querySelector('#read-status');
 
 addNewBookBtn.addEventListener('click', () => {
     newBookModal.showModal();
@@ -25,10 +25,10 @@ cancelBtn.addEventListener('click', () => {
 bookForm.addEventListener('submit', event => {
     event.preventDefault();
     addBookToLibrary(
-        bookTitle.value,
-        bookAuthor.value,
-        bookPages.value,
-        readStatus.checked ? 'Read' : 'Not Read'
+        titleInput.value,
+        authorInput.value,
+        pagesInput.value,
+        readStatusInput.checked ? 'Read' : 'Not Read'
     );
     displayBook();
     bookForm.reset();
