@@ -1,7 +1,7 @@
 const libraryContainer = document.querySelector('.library-container')
 
 const myLibrary = [];
-
+console.log(myLibrary)
 function Book(title, author, pages, readStatus, bookId) {
     this.title = title;
     this.author = author;
@@ -27,6 +27,8 @@ addBookToLibrary('The Left Hand of Darkness', 'Ursula K. Le Guin', 304, 'read');
 function displayBook() {
     for (let book of myLibrary) {
         const bookModal = document.createElement('div');
+        const upperBookModal = document.createElement('div');
+        const lowerBookModal = document.createElement('div');
         const bookTitle = document.createElement('h2');
         const bookAuthor = document.createElement('p');
         const bookPages = document.createElement('p');
@@ -38,7 +40,10 @@ function displayBook() {
         bookPages.textContent = book.pages;
         readStatusBtn.textContent = book.readStatus;
         removeBtn.textContent = 'Remove';
-        bookModal.append(bookTitle, bookAuthor, bookPages, readStatusBtn, removeBtn)
+
+        upperBookModal.append(bookTitle, bookAuthor, bookPages);
+        lowerBookModal.append(readStatusBtn, removeBtn);
+        bookModal.append(upperBookModal, lowerBookModal);
 
         libraryContainer.appendChild(bookModal);
     }
