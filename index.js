@@ -35,6 +35,15 @@ function displayBook() {
         const readStatusBtn = document.createElement('button');
         const removeBtn = document.createElement('button');
 
+        bookModal.classList.add('book-modal');
+        upperBookModal.classList.add('upper-modal');
+        lowerBookModal.classList.add('lower-modal');
+        bookTitle.classList.add('book-title');
+        bookAuthor.classList.add('book-author');
+        bookPages.classList.add('book-pages');
+        readStatusBtn.classList.add('read-status-btn');
+        removeBtn.classList.add('remove-btn');
+
         bookTitle.textContent = book.title;
         bookAuthor.textContent = book.author;
         bookPages.textContent = book.pages;
