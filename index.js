@@ -48,6 +48,10 @@ function Book(title, author, pages, readStatus, bookId) {
     };
 }
 
+Book.prototype.toggleReadStatus = function () {
+    this.readStatus = this.readStatus === 'Read' ? 'Not Read' : 'Read';
+}
+
 function addBookToLibrary(title, author, pages, readStatus) {
     const bookId = crypto.randomUUID();
     const createBook = new Book(title, author, pages, readStatus, bookId);
@@ -108,7 +112,7 @@ function displayBook() {
         })
 
         readStatusBtn.addEventListener('click', () => {
-            book.readStatus = book.readStatus === 'Read' ? 'Not Read' : 'Read';
+            book.toggleReadStatus();
             updateReadStatusButton(book, readStatusBtn);
         })
     }
