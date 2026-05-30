@@ -59,6 +59,12 @@ addBookToLibrary('The Hobbit', 'J.R.R. Tolkien', 295, 'Read');
 addBookToLibrary('Dune', 'Frank Herbert', 412, 'Not Read');
 addBookToLibrary('The Left Hand of Darkness', 'Ursula K. Le Guin', 304, 'Read');
 
+function updateReadStatusButton(book, readStatusBtn) {
+    readStatusBtn.textContent = book.readStatus;
+    readStatusBtn.classList.toggle('read-btn', book.readStatus === 'Read');
+    readStatusBtn.classList.toggle('not-read-btn', book.readStatus === 'Not Read');
+}
+
 function displayBook() {
     libraryContainer.textContent = '';
 
@@ -78,14 +84,14 @@ function displayBook() {
         bookTitle.classList.add('book-title');
         bookAuthor.classList.add('book-author');
         bookPages.classList.add('book-pages');
-        readStatusBtn.classList.add('read-status-btn', 'modal-btn');
+        readStatusBtn.classList.add('modal-btn');
         removeBtn.classList.add('remove-btn', 'modal-btn');
 
         bookTitle.textContent = book.title;
         bookAuthor.textContent = book.author;
         bookPages.textContent = `${book.pages} pages`;
-        readStatusBtn.textContent = book.readStatus;
         removeBtn.textContent = 'Remove';
+        updateReadStatusButton(book, readStatusBtn);
 
         upperBookModal.append(bookTitle, bookAuthor, bookPages);
         lowerBookModal.append(readStatusBtn, removeBtn);
@@ -99,6 +105,11 @@ function displayBook() {
                 myLibrary.splice(bookIdIndex, 1);
                 bookModal.remove();
             }
+        })
+
+        readStatusBtn.addEventListener('click', () => {
+            book.readStatus = book.readStatus === 'Read' ? 'Not Read' : 'Read';
+            updateReadStatusButton(book, readStatusBtn);
         })
     }
 }

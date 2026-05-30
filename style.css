@@ -87,7 +87,14 @@ header {
     background-color: rgb(239, 239, 239);
 }
 
-.read-status-btn {
+.read-btn {
+    border: 1px solid grey;
+    background-color: #1a365d;
+    color: white;
+}
+
+.not-read-btn {
+    background-color: white;
     border: 1px solid grey;
 }
 
