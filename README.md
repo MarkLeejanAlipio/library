@@ -24,3 +24,10 @@ First project in JavaScript
     - ADD the new book to the library array
     - DISPLAY the updated library
     - RESET the form and close the dialog
+5. ADD remove button on each book
+    - FIND the index of the selected book using `findIndex()`
+    - DELETE the book from the library array using `splice(index, 1)`
+6. ADD toggle status button
+    - CREATE a `Book` prototype method that toggles the book's `readStatus`
+    - WHEN `readStatusBtn` is clicked, call `book.toggleReadStatus()`
+    - RUN a function that updates the button text and class depending on `readStatus`
