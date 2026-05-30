@@ -4,6 +4,9 @@ First project in JavaScript
 # Preview
 ![Project Image](/image.png)
 
+# Live
+[Live page](https://markleejanalipio.github.io/library/)
+
 # Pseudocode
 1. CREATE an array that will store all book objects
 2. CREATE functions to manage book objects:
